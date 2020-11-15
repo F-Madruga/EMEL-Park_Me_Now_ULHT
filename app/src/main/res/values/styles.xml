@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="colorPrimary">@color/emelDarkBlue</item>
+        <item name="colorPrimaryDark">@color/emelLightBlue</item>
+        <item name="colorAccent">@color/emelGreen</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="AppTheme">
+        <item name="android:background">@color/emelDarkBlue</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button" parent="">
+        <item name="colorPrimary">@color/emelGreen</item>
+    </style>
+
+    <style name="Widget.App.Confirmation.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/Confirmation.Button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Confirmation.Button" parent="">
+        <item name="colorPrimary">@color/emelGreen</item>
+    </style>
+
+    <style name="Widget.App.Deletion.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/Deletion.Button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Deletion.Button" parent="">
+        <item name="colorPrimary">@color/danger</item>
+    </style>
+
+    <style name="Widget.App.Info.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/Info.Button</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Info.Button" parent="">
+        <item name="colorPrimary">@color/emelLightBlue</item>
+    </style>
+
+</resources>

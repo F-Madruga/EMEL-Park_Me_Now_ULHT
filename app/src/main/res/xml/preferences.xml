@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:key="darkMode"
+        android:defaultValue="false"
+        android:title="@string/darkMode" />
+
+    <SwitchPreference
+        android:key="lowBateryDarkmode"
+        android:defaultValue="true"
+        android:title="@string/lowBateryDarkmode_title"
+        android:summary="@string/lowBateryDarkmode_description"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="darkModeAtNight"
+        android:title="@string/darkModeAtNight_title"
+        android:summary="@string/darkModeAtNight_description" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="shakeFilters"
+        android:title="@string/shakeFilters_title"
+        android:summaryOn="@string/shakeFilters_description_1"
+        android:summaryOff="@string/shakeFilters_description_2"/>
+
+</PreferenceScreen>

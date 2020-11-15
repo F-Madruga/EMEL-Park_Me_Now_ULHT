@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    tools:context=".ui.fragments.ParksMapFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="6dp"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_filters"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_filter"
+                android:drawableTint="@color/white"
+                style= "@style/Widget.App.Button"
+                android:text="@string/filters" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"/>
+
+    <LinearLayout
+        android:id="@+id/filters_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:weightSum="4"
+        android:background="@color/emelDarkBlue"
+        android:visibility="invisible"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/filter_availability"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/availability" />
+
+            <RadioGroup
+                android:id="@+id/filter_availability"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/filter_availability_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="All"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/all" />
+
+                <RadioButton
+                    android:id="@+id/filter_availability_empty"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="Empty"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/empty" />
+
+                <RadioButton
+                    android:id="@+id/filter_availability_potentially_full"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="Potentially Full"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/potentially_full" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/filter_type"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/type" />
+
+            <RadioGroup
+                android:id="@+id/filter_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/filter_type_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="All"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/all" />
+
+                <RadioButton
+                    android:id="@+id/filter_type_superficie"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="Superfície"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/surface" />
+
+                <RadioButton
+                    android:id="@+id/filter_type_estrutura"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:tag="Estrutura"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/emelGreen"
+                    android:text="@string/structure" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/filter_distance"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/distance_km" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/filter_distance_value"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+
+                <SeekBar
+                    android:id="@+id/filter_distance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:layout_margin="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_hide_filter_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style= "@style/Widget.App.Button"
+            android:text="Ok" />
+
+    </LinearLayout>
+
+</LinearLayout>
